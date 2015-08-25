@@ -1,9 +1,7 @@
 source ~/.nvm/nvm.sh
-export PATH=$PATH:$HOME/.local/bin:$HOME/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/bin
-export PATH=$PATH:~/go1.5/bin
 export GOROOT=$HOME/go1.5
-export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/bin:~/go1.5/bin$GOROOT/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/bin
 export GOPATH=$HOME/.local/go
 source ~/.nvm/nvm.sh
 source ~/.local/bin/d
