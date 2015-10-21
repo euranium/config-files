@@ -3,6 +3,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'flazz/vim-colorschemes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-surround'
@@ -39,6 +40,7 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 colorscheme molokai
+imap jk <Esc>
 set clipboard=unnamed
 set clipboard=unnamedplus
 set guifont=Consolas:h12
