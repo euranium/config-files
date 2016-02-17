@@ -17,6 +17,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'fatih/vim-go'
 Plugin 'gmarik/Vundle.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 call vundle#end() "required
 filetype on "required
@@ -41,7 +42,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 colorscheme molokai
 imap jk <Esc>
-set clipboard=unnamed
+"set clipboard=unnamed
 set clipboard=unnamedplus
 set guifont=Consolas:h12
 set backspace=eol,start,indent
@@ -88,6 +89,9 @@ set foldlevelstart=20   " Don't indent files on open
 set splitbelow          " Change default split position
 set splitright          " Change default split position
 set suffixes=.bak,~,.o,.h,.info,.swp,.class
+
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 if has('mouse')
 	set mouse=a
@@ -155,7 +159,7 @@ let g:vimfiler_ignore_pattern='\%(.ini\|.sys\|.bat\|.BAK\|.DAT\|.pyc\|.egg-info\
   \ '^\%(.env\|.ebextensions\|.elasticbeanstalk\|Procfile\)$\|'.
   \ '^\%(.git\|.tmp\|__pycache__\|.DS_Store\|.o\|.tox\|.idea\|.ropeproject\)$'
 
-set wildignore=*.o,*.obj,*~,*.pyc,*.class "stuff to ignore when tab completing
+set wildignore=*.o,*.obj,*~,*.pyc,*.class,CVS,.git "stuff to ignore when tab completing
 set wildignore+=.env
 set wildignore+=.env[0-9]+
 set wildignore+=.env-pypy
