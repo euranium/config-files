@@ -105,6 +105,7 @@ function TrimWhiteSpace()
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
 
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "set runtimepath+=~/.vim/bundle/jshint2.vim/
 

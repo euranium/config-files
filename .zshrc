@@ -98,6 +98,7 @@ FIGNORE=.o
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias py='python3'
+alias more=less
 alias tmux='TERM=xterm-256color tmux'
 alias c='clear'
 alias bs='source ~/.zshrc'
