@@ -7,5 +7,5 @@ $ curl https://raw.githubusercontent.com/euranium/config-files/master/.vimrc > ~
 ```
 or zshrc with
 ``` sh
-$ curl https://raw.githubusercontent.com/euranium/config-files/master/.zshrc
+$ curl https://raw.githubusercontent.com/euranium/config-files/master/.zshrc > ~/.zshrc
 ```
