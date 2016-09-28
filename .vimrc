@@ -11,7 +11,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'bling/vim-airline'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'ap/vim-css-color'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-unimpaired'
@@ -44,6 +43,10 @@ colorscheme molokai
 imap jk <Esc>
 "set clipboard=unnamed
 set clipboard=unnamedplus
+"if $TMUX == ''
+	"set clipboard+=unnamed
+"endif
+
 set guifont=Consolas:h12
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
@@ -90,6 +93,11 @@ set splitbelow          " Change default split position
 set splitright          " Change default split position
 set suffixes=.bak,~,.o,.h,.info,.swp,.class
 
+" eclim stuff, I should look over this stuff later, and get it working how I
+" want it to, but I know I wont, and i'll end up leaving it default, like how
+" i'm now capitalizing my I's
+let g:EclimCompletionMethod = 'omnifunc'
+
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
@@ -105,6 +113,9 @@ function TrimWhiteSpace()
 map <F2> :call TrimWhiteSpace()<CR>
 map! <F2> :call TrimWhiteSpace()<CR>
 
+" change the file for c/c++ files, have set to default to c
+" with no std bc I'm not using standard library functions, even tho they
+" should be standard, dprintf is supper helpful
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 "set runtimepath+=~/.vim/bundle/jshint2.vim/

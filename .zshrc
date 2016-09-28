@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/harveyr8/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,7 +53,7 @@ plugins=(vi-mode git tmux history-substring-search)
 
 # User configuration
 
-export PATH="/home/harveyr8/.gimme/versions/go1.5.linux.amd64/bin::/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/harveyr8/.local/bin:/home/harveyr8/bin:/home/harveyr8/.local/bin:/home/harveyr8/.meteor:/home/harveyr8/.local/bin:/home/harveyr8/bin"
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:$HOME/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -71,22 +71,22 @@ export ARCHFLAGS="-arch x86_64"
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 export LC_ALL=en_US.utf-8
 export LANG="$LC_ALL"
-export CVSROOT='/home/harveyr8/cs352w16/CVSrep'
+export TERM='xterm-256color'
 source ~/.nvm/nvm.sh
-export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/bin:$PATH
-export PATH=/home/cs579-software/bin:$PATH
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/bin
 
 # set vi mode
 bindkey -v
 # set keytimeout to .1sec, may cause problems
 export KEYTIMEOUT=1
 
-# ignore binary files with vim
+# ignore files with no file extension with vim
 zstyle ':completion:*:*:vim:*:*files' ignored-patterns '(|*/)[^/.]##|*.o'
 FIGNORE=.class
 FIGNORE=.o
+
+#nvm stuff
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,15 +99,14 @@ FIGNORE=.o
 
 alias py='python3'
 alias more=less
-alias tmux='TERM=xterm-256color tmux'
 alias c='clear'
 alias bs='source ~/.zshrc'
 alias gob='go build'
 alias b='clear; go build'
 alias m='make'
-eval "$(gimme 1.5)"
+eval "$(gimme 1.7)"
 export GOPATH=$HOME/.bin/go
-alias gimmego='eval "$(gimme 1.5.3)'
+alias gimmego='eval "$(gimme 1.7)'
 alias ':q'=exit
 #alias 'make'='clear; make'
 alias 'zshrc'='vim ~/.zshrc' h=history j=jobs e='./run $@' a='./a' f='./c'
@@ -115,8 +114,3 @@ alias h=history j=jobs e='./run $@' aa='./a' f='./c'
 alias j=jobs
 alias workwork='find / -exec strings {} \; | pv -q -L 2k'
 alias work='while 1; do; tree /; done;'
-#alias 'e'='./run $@'
-
-#alias aa=./a
-#alias 'f'='./c'
-

@@ -1,5 +1,11 @@
 # config-files
-vim and tmux config files
+vim, bash, zsh and tmux config files
+I no longer use bash, so only zsh will be updated.
+
+Run install script with 
+``` sh
+eval "$(curl -sL https://raw.githubusercontent.com/euranium/config-files/master/setup.sh)"
+```
 
 get .vimrc and install all packages with command. I highly recommand you don't do this (this is mostly just for me to use).
 You should make your own rc file and only install packages you know you need/want and set options likewise.
