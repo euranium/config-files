@@ -47,6 +47,7 @@ set clipboard=unnamedplus
 	"set clipboard+=unnamed
 "endif
 
+set term=screen-256color
 set guifont=Consolas:h12
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
